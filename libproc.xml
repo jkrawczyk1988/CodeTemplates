@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<codetemplate xmlns="http://schemas.borland.com/Delphi/2005/codetemplates"
+    version="1.0.0">
+  <template name="libproc" invoke="manual">
+    <point name="parameters_with_types">
+        <text>
+            parameters
+        </text>
+        <hint>
+            Procedure parameters
+        </hint>
+    </point>
+    <point name="PROCEDURE_NAME">
+        <text>
+            PROCEDURE_NAME
+        </text>
+        <hint>
+            Procedure name
+        </hint>
+    </point>
+    <point name="fLibrary">
+        <text>
+            fLibrary
+        </text>
+        <hint>
+            TLibrary object name
+        </hint>
+    </point>
+    <point name="parameters">
+        <text>
+            
+        </text>
+        <hint>
+            Optional function/procedure parameters
+        </hint>
+    </point>
+    <description>
+      Aufruf einer Prozedur aus einer Bibliothek (TLibrary-Objekt)
+    </description>
+    <author>
+      Jacek Krawczyk
+    </author>
+    <script language="Delphi" onenter="false" onleave="true">
+    </script>
+    <code language="Delphi" delimiter="|">
+      <![CDATA[
+type
+  TProcedureType = procedure(|parameters_with_types|);
+const
+  PROCEDURE_NAME = '|PROCEDURE_NAME|';
+var
+  procedureVariable: TProcedureType;
+begin
+  procedureVariable := |fLibrary|.LoadFunction(PROCEDURE_NAME);
+  procedureVariable(|parameters|);
+      ]]>
+    </code>
+  </template>
+</codetemplate>

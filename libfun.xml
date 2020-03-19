@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<codetemplate xmlns="http://schemas.borland.com/Delphi/2005/codetemplates"
+    version="1.0.0">
+  <template name="libfun" invoke="manual">
+    <point name="parameters_with_types">
+        <text>
+            parameters
+        </text>
+        <hint>
+            Function or procedure parameters
+        </hint>
+    </point>
+    <point name="Result">
+        <text>
+            : T
+        </text>
+        <hint>
+            Function or procedure result
+        </hint>
+    </point>
+    <point name="FUNCTION_NAME">
+        <text>
+            FUNCTION_NAME
+        </text>
+        <hint>
+            Function name
+        </hint>
+    </point>
+    <point name="fLibrary">
+        <text>
+            fLibrary
+        </text>
+        <hint>
+            TLibrary object name
+        </hint>
+    </point>
+    <point name="parameters">
+        <text>
+            
+        </text>
+        <hint>
+            Optional function/procedure parameters
+        </hint>
+    </point>
+    <description>
+      Aufruf einer Funktion aus einer Bibliothek (TLibrary-Objekt)
+    </description>
+    <author>
+      Jacek Krawczyk
+    </author>
+    <script language="Delphi" onenter="false" onleave="true">
+    </script>
+    <code language="Delphi" delimiter="|">
+      <![CDATA[
+type
+  TFunctionType = function(|parameters_with_types|)|Result|;
+const
+  FUNCTION_NAME = '|FUNCTION_NAME|';
+var
+  functionVariable: TFunctionType;
+begin
+  functionVariable := |fLibrary|.LoadFunction(FUNCTION_NAME);
+  Result := functionVariable(|parameters|);
+      ]]>
+    </code>
+  </template>
+</codetemplate>

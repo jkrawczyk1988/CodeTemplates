@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<codetemplate xmlns="http://schemas.borland.com/Delphi/2005/codetemplates"
+    version="1.0.0">
+  <template name="dunit" invoke="manual">
+    <point name="Expected variable">
+        <text>
+            expValue
+        </text>
+        <hint>
+            Expected value variable
+        </hint>
+    </point>
+    <point name="Expected value">
+        <text>
+            value
+        </text>
+        <hint>
+            Expected value
+        </hint>
+    </point>
+    <point name="Actual variable">
+        <text>
+            actValue
+        </text>
+        <hint>
+            Actual value variable
+        </hint>
+    </point>
+    <point name="Actual value">
+        <text>
+            value
+        </text>
+        <hint>
+            Actual value
+        </hint>
+    </point>
+    <description>
+      DUnit Standardkonstruktion einer Testprozedur
+    </description>
+    <author>
+      Jacek Krawczyk
+    </author>
+    <script language="Delphi" onenter="false" onleave="true">
+      DeclareVariable(|Expected variable|);
+      DeclareVariable(|Actual variable|);
+    </script>
+    <code language="Delphi" delimiter="|">
+      <![CDATA[
+// Arrange
+|Expected variable| := |Expected value|;
+
+// Act
+|Actual variable| := |Actual value|;
+
+// Assert
+CheckEquals(|Expected variable|, |Actual variable|);
+      ]]>
+    </code>
+  </template>
+</codetemplate>

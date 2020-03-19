@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<codetemplate	xmlns="http://schemas.borland.com/Delphi/2005/codetemplates"
+				version="1.0.0">
+	<template name="private" surround="False" invoke="manual">
+    <point name="selected">
+      <text>
+        
+      </text>
+      <hint>
+        Private section
+      </hint>
+    </point>
+ 		<description>
+			Standard Private-Sektion
+		</description>
+		<author>
+			Jacek Krawczyk
+		</author>
+		<code language="Delphi" delimiter="|"><![CDATA[{$REGION 'Internal declarations'}
+strict private
+  |selected|
+{$ENDREGION}
+]]>
+		</code>
+	</template>
+</codetemplate>
+
