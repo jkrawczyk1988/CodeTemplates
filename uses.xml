@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<codetemplate	xmlns="http://schemas.borland.com/Delphi/2005/codetemplates"
+				version="1.0.0">
+	<template name="uses" surround="true" invoke="manual">
+		<description>
+      Standard uses-Ordnung
+		</description>
+		<author>
+			Jacek Krawczyk
+		</author>
+		<code language="Delphi" delimiter="|"><![CDATA[uses
+  // Delphi Library
+  // Third-Party Library
+  // Internal Units
+  // Project Units
+  |selected|
+]]>
+		</code>
+	</template>
+</codetemplate>
+
