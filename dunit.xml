@@ -41,8 +41,8 @@
       Jacek Krawczyk
     </author>
     <script language="Delphi" onenter="false" onleave="true">
-      DeclareVariable(|Expected variable|);
       DeclareVariable(|Actual variable|);
+      DeclareVariable(|Expected variable|);
     </script>
     <code language="Delphi" delimiter="|">
       <![CDATA[
