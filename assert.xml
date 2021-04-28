@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<codetemplate	xmlns="http://schemas.borland.com/Delphi/2005/codetemplates"
+				version="1.0.0">
+	<template name="assert" surround="true" invoke="manual">
+    <point name="object">
+        <text>
+            fObject
+        </text>
+        <hint>
+            Class object
+        </hint>
+    </point>
+		<description>
+      Assertion of object initialization
+		</description>
+		<author>
+			Jacek Krawczyk
+		</author>
+    <script language="Delphi" onenter="false" onleave="true">
+    </script>
+		<code language="Delphi" delimiter="|"><![CDATA[
+Assert(Assigned(|object|));
+]]>
+		</code>
+	</template>
+</codetemplate>
+
