@@ -10,8 +10,8 @@
 			Jacek Krawczyk
 		</author>
 		<code language="Delphi" delimiter="|"><![CDATA[uses
-  // Pascal Library
-  // Third-Party Library
+  // Delphi Library Units
+  // Third-Party Units
   // Internal Units
   // Project Units
   |selected|
